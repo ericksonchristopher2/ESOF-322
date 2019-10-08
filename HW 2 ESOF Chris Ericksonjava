@@ -1,0 +1,51 @@
+public  interface IDatabaseChoice{
+    public void store();
+}
+
+public  interface IRelational{
+    private void tablestore();
+}
+
+public  interface INoSQL{
+    private void documentstore();
+}
+
+public  interface IGraph{
+    public void nodestore();
+}
+
+public class Relational impliment IRelational {
+    tablestore();
+}
+
+public class NoSQL impliment INoSQL{
+    documentstore();
+}
+
+public class Graph impliment IGraph{
+    nodestore();
+}
+
+public class RelationalDBAdapter impliment IDatabaseChoice{
+    IDatabaseChoice database;
+    public RelationalDBAdapter(IDatabaseChoice) {this.databasechoice = d};
+    void store() {database.tablestore()};
+}
+
+public class NoSQLDBAdapter impliment IDatabaseChoice{
+    IDatabaseChoice database;
+    public NoSQLDBAdapter(IDatabaseChoice) {this.databasechoice = d};
+    void store() {database.documentstore()};
+}
+
+public class GraphDBAdapter impliment IDatabaseChoice{
+    IDatabaseChoice database;
+    public GraphDBAdapter(IDatabaseChoice) {this.databasechoice = d};
+    void store() {database.nodestore()};
+}
+
+
+
+
+
+
